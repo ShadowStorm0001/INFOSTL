@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Confirm Payment</h1>
+        <p>Are you sure you want to proceed? You are paying for <span id="room"></span>.</p>
+        <p>This will cost you $3 plus a 5% surcharge.</p>
+        <p><strong>Payment Details:</strong></p>
+        <p>Card Number: <span id="card-number"></span></p>
+        <p>Expiry Date: <span id="expiry-date"></span></p>
+        <p>CVC: <span id="cvc"></span></p>
+        <p>Name on Card: <span id="name"></span></p>
+        <button id="confirm-button" onclick="confirmPayment()">Pay</button>
+    </div>
+    <script src="confirmation.js"></script>
+</body>
+</html>

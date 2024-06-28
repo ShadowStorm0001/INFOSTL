@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Payment Fee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Internet Payment Fee</h1>
+        <div id="room-selection">
+            <label for="room">Choose a room:</label>
+            <select id="room">
+                <option value="">Select a room</option>
+                <option value="kitchen">Kitchen</option>
+                <option value="livingroom">Living Room</option>
+                <option value="masterbedroom">Master Bedroom</option>
+            </select>
+            <button id="continue-button" onclick="showPaymentForm()">Pay and Continue</button>
+        </div>
+
+        <div id="payment-form" class="hidden">
+            <h2>Payment Details</h2>
+            <form onsubmit="return validateCardNumber()">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" name="cvc" required>
+
+                <label for="name">Name on Card:</label>
+                <input type="text" id="name" name="name" required>
+
+                <button type="submit">Pay</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
